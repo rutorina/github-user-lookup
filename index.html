@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Lookup</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Github User Lookup</h1>
+    </header>
+    <form class="search-bar">
+      <input
+        type="text"
+        placeholder="Enter Github username"
+        id="username-input"
+        autocomplete="off"
+      />
+      <button class="search-icon-container" id="search-button" aria-label="Search">
+        <img
+          src="./images/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Search Icon"
+          id="search-icon"
+        />
+      </button>
+    </form>
+    <section class="user-card-container">
+      <div class="error-message hidden">
+        <h2 id="error-message-text">Error</h2>
+      </div>
+
+      <div class="loading-message hidden">
+        <h2 id="loading-message-text">Loading...</h2>
+      </div>
+
+      <div class="user-card hidden">
+        <div class="card-header">
+          <img alt="user avatar" class="card-avatar" />
+          <h2 id="user-name">User-name</h2>
+        </div>
+        <div class="card-info">
+          <p id="user-bio">User bio</p>
+          <div class="card-stats">
+            <div class="card-stat">
+              <p><span id="user-followers-count">0</span> Followers</p>
+            </div>
+            <div class="card-stat">
+              <p><span id="user-following-count">0</span> Following</p>
+            </div>
+            <div class="card-stat">
+              <p><span id="user-repos-count">0</span> Repos</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-repos">
+          <ul class="card-repos-list" id="card-repos-list">
+            <li class="card-repos-list-item">new repo</li>
+          </ul>
+        </div>
+        <div class="card-links">
+          <div class="card-links-item">
+            <a
+              id="github-link"              
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+              <img
+                src="./images/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="github link icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h3>Copyright &copy; 2026 @rutorina1</h3>
+    </footer>
+  </body>
+</html>
