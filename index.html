@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github User Lookup</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <header>
@@ -18,7 +18,11 @@
         id="username-input"
         autocomplete="off"
       />
-      <button class="search-icon-container" id="search-button" aria-label="Search">
+      <button
+        class="search-icon-container"
+        id="search-button"
+        aria-label="Search"
+      >
         <img
           src="./images/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
           alt="Search Icon"
@@ -26,16 +30,19 @@
         />
       </button>
     </form>
-    <section class="user-card-container">
-      <div class="error-message hidden">
-        <h2 id="error-message-text">Error</h2>
+    <section class="card-container hidden" id="error-message-container">
+      <div class="error-message">
+        <h2 id="error-message-text">Error number</h2>
+        <h3 id="error-message-description">user name doesnt exist</h3>
       </div>
-
-      <div class="loading-message hidden">
+    </section>
+    <section class="card-container hidden" id="loading-message-container">
+      <div class="loading-message">
         <h2 id="loading-message-text">Loading...</h2>
       </div>
-
-      <div class="user-card hidden">
+    </section>
+    <section class="card-container" id="user-card-container">
+      <div class="user-card">
         <div class="card-header">
           <img alt="user avatar" class="card-avatar" />
           <h2 id="user-name">User-name</h2>
@@ -61,11 +68,7 @@
         </div>
         <div class="card-links">
           <div class="card-links-item">
-            <a
-              id="github-link"              
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a id="github-link" target="_blank" rel="noopener noreferrer">
               Github
               <img
                 src="./images/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"

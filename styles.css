@@ -1,7 +1,152 @@
-*, 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap");
+
+/* Reset CSS */
+*,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+/* Utilities */
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* vars */
+
+:root {
+  /* colors */
+  --primary-bg-color: #0d1117;
+  --secondary-bg-color: #161b22;
+
+  --primary-text-color: #e6edf3;
+  --secondary-text-color: #8d96a0;
+
+  --success-color: #3fb950;
+  --error-color: #f85149;
+  --accent-color: #58a6ff;
+
+  /* font */
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "JetBrains Mono", monospace;
+  --font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* global styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primary-font);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  height: 100vh;
+  font-size: var(--font-size);
+  gap: 4rem;
+}
+
+/* Header */
+
+header {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--accent-color);
+  width: 40%;
+  border-radius: 2rem;
+}
+
+/* search  */
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 30%;
+  height: 3rem;
+}
+
+#username-input {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#search-button {
+  /* padding: 0.5rem 2rem; */
+  padding: 0.5rem 1.5rem;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--accent-color);
+}
+
+/* card */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 40%;
+  padding: 3rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 2rem;
+}
+
+/* Error Message */
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 40%;
+  color: var(--error-color);
+}
+
+/* Loading Message */
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 40%;
+  color: var(--accent-color);
+}
+
+/* user card */
+
+/* Footer */
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
+  color: var(--primary-text-color);
 }
