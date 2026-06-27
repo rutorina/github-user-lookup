@@ -19,6 +19,15 @@ input {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Utilities */
 
 .hidden {
@@ -82,7 +91,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  width: 30%;
+  width: 50%;
   height: 3rem;
 }
 
@@ -111,7 +120,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  width: 40%;
+  width: 60%;
   padding: 3rem;
   background-color: var(--secondary-bg-color);
   border-radius: 2rem;
@@ -141,6 +150,120 @@ header {
 }
 
 /* user card */
+
+.user-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 2rem; */
+  width: 100%;
+  height: 25rem;
+}
+
+.user-card > * {
+  height: 100%;
+  background-color: var(--primary-bg-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.card-section-header {
+  color: var(--accent-color);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+/* card header */
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 30%;
+}
+
+.card-avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* card info */
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 35%;
+}
+
+#user-bio {
+  text-align: left;
+  color: var(--secondary-text-color);
+  max-height: 75%;
+  overflow-y: scroll;
+  padding-right: 0.5rem;
+}
+
+#user-bio::-webkit-scrollbar, .card-repos-list::-webkit-scrollbar {
+  background-color: var(--secondary-bg-color);
+  width: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+#user-bio::-webkit-scrollbar-thumb, .card-repos-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 0.25rem;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* card repos */
+
+.card-repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 17%;
+}
+
+.card-repos-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  max-height: 75%;
+  overflow-y: scroll;
+}
+
+/* card link */
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: min-content;
+}
 
 /* Footer */
 
