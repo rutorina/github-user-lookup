@@ -225,9 +225,8 @@ header {
 
 .card-stats {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 1rem;
   width: 100%;
   margin-top: 0.5rem;
 }
